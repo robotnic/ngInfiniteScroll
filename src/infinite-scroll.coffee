@@ -29,7 +29,7 @@ mod.directive 'infiniteScroll', ['$rootScope', '$window', '$timeout', 'THROTTLE_
     # called in order to throttle the function call.
     handler = ->
       if container == $window
-        containerBottom = container.height() + container.scrollTop()
+        containerBottom = $(container).height() + container.scrollTop()
         elementBottom = elem.offset().top + elem.height()
       else
         containerBottom = container.height()

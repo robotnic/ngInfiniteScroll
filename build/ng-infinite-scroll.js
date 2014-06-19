@@ -27,7 +27,7 @@ mod.directive('infiniteScroll', [
         handler = function() {
           var containerBottom, containerTopOffset, elementBottom, remaining, shouldScroll;
           if (container === $window) {
-            containerBottom = container.height() + container.scrollTop();
+            containerBottom = $(container).height() + container.scrollTop();
             elementBottom = elem.offset().top + elem.height();
           } else {
             containerBottom = container.height();
